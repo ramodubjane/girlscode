@@ -2,7 +2,7 @@ import streamlit as st
 
 def show():
     # Display the logo
-    st.image("images/aquaguard_logo.png", width=300)
+    st.image("images/logo.jpeg", width=300)
 
     # App title and description
     st.title("Welcome to AquaGuard")
