@@ -21,18 +21,15 @@ def show():
 
     st.subheader('Contaminated Areas')
 
-    # Define the color scale for the markers
-    color_scale = [
-        [0, "green"], 
-        [7, "red"]
-    ]
+    # Define the color logic for each row based on the Contaminant_Level
+    df['color'] = df['Contaminant_Level'].apply(lambda x: [200, 30, 0, 140] if x >= 7 else [0, 200, 0, 140])
 
     # Create a pydeck layer for the map
     layer = pdk.Layer(
         "ScatterplotLayer",
         df,
         get_position=["Longitude", "Latitude"],
-        get_fill_color="[200, 30, 0, 140]" if int("Contaminant_Level") >= 7 else "[0, 200, 0, 140]",
+        get_fill_color="color",
         get_radius=100000,
         radius_scale=1,
         pickable=True
@@ -86,3 +83,7 @@ def show():
 
     else:
         st.write("No filters exceed the selected contaminant level threshold.")
+
+# Run the application
+if __name__ == "__main__":
+    show()
