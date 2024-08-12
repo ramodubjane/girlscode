@@ -32,7 +32,7 @@ def show():
         "ScatterplotLayer",
         df,
         get_position=["Longitude", "Latitude"],
-        get_fill_color="[200, 30, 0, 140]" if "Contaminant_Level" >= 7 else "[0, 200, 0, 140]",
+        get_fill_color="[200, 30, 0, 140]" if int("Contaminant_Level") >= 7 else "[0, 200, 0, 140]",
         get_radius=100000,
         radius_scale=1,
         pickable=True
