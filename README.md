@@ -14,8 +14,9 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/aquaguard.git
+git clone https://github.com/ramodubjane/girlscode.git
 cd aquaguard
+
 Install required dependencies:
 Ensure you have Python 3.7 or later installed. Then, run:
 
