@@ -11,3 +11,5 @@ def show():
     
     Navigate through the app using the sidebar to explore our features, including real-time water quality monitoring and in-depth data analysis.
     """)
+
+
